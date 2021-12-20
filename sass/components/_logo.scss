@@ -1,0 +1,13 @@
+.logo {
+	@extend %logo-styles;
+
+	color: $accent-color;
+
+	&--dark {
+		color: #000000;
+	}
+
+	&--light {
+		color: $secondary-title-color;
+	}
+}

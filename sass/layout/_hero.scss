@@ -1,0 +1,23 @@
+.hero {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding-top: 200px;
+	padding-bottom: 200px;
+
+	background-color: $secondary-bg-color;
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hero__title {
+	margin-bottom: 30px;
+	max-width: 696px;
+	margin-right: auto;
+	margin-left: auto;
+
+	@extend %hero-title-styles;
+
+	color: $secondary-title-color;
+}
