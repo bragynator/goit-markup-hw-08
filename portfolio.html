@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header block">
         <div class="container header__container">
             <a href="./index.html" class="logo header__logo">Web<span lang="en" class="logo--dark">Studio</span>
             </a>
@@ -48,10 +48,73 @@
                     </a>
                 </li>
             </ul>
+            <button type="button" class="open-menu-button">
+                <svg class="open-menu-icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-mob-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu is-hidden">
+            <div class="container mobile-menu__container">
+                <div class="mobile-menu__top">
+                    <button type="button" class="close-menu-button">
+                        <svg class="close-menu-icon" width="40" height="40">
+                            <use href="./images/icons.svg#icon-mob-menu-close"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-sitenav">
+                        <li class="mobile-sitenav__item">
+                            <a href="./index.html" class="mobile-sitenav__link">Студия</a>
+                        </li>
+                        <li class="mobile-sitenav__item">
+                            <a href="#" class="mobile-sitenav__link mobile-sitenav__link--current">Портфолио</a>
+                        </li>
+                        <li class="mobile-sitenav__item">
+                            <a href="" class="mobile-sitenav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-menu__bottom">
+                    <ul class="mobile-contacts">
+                        <li class="mobile-contacts__item">
+                            <a href="tel:+380961111111" class="mobile-contacts__link">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-contacts__item">
+                            <a href="mailto:info@devstudio.com" class="mobile-contacts__link">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-socials">
+                        <li class="mobile-socials__item">
+                            <a href="" class="mobile-socials__link">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="mobile-socials__item">
+                            <a href="" class="mobile-socials__link">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="mobile-socials__item">
+                            <a href="" class="mobile-socials__link">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="mobile-socials__item">
+                            <a href="" class="mobile-socials__link">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main>
-        <section class="section">
+        <section class="section block">
             <div class="container">
                 <h1 class="section__title visually-hidden">Портфолио</h1>
                 <ul class="filter">
@@ -65,7 +128,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port1.jpg" alt="Визуализация сайта Технокряк" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port1.jpg 1x, ./images/port1@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port1-tab.jpg 1x, ./images/port1-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port1-mob.jpg 1x, ./images/port1-mob@2x.jpg 2x">
+                                    <img src="./images/port1.jpg" alt="Визуализация сайта Технокряк">
+                                </picture>
                                 <p class="portfolio__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                                     платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -78,7 +146,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port2.jpg" alt="Визуализация дизайна постера нью орлеан против голдэн стар" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port2.jpg 1x, ./images/port2@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port2-tab.jpg 1x, ./images/port2-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port2-mob.jpg 1x, ./images/port2-mob@2x.jpg 2x">
+                                    <img src="./images/port2.jpg" alt="Визуализация дизайна постера нью орлеан против голдэн стар">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam earum ut corrupti? Aut qui quam illum id mollitia. Esse suscipit ex, tenetur eos architecto non odit veniam cumque. Velit, nam?</p>
                             </div>
                             <div class="portfolio__content">
@@ -90,7 +163,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port3.jpg" alt="Визуализация приложения ресторана сифуд" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port3.jpg 1x, ./images/port3@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port3-tab.jpg 1x, ./images/port3-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port3-mob.jpg 1x, ./images/port3-mob@2x.jpg 2x">
+                                    <img src="./images/port3.jpg" alt="Визуализация приложения ресторана сифуд">
+                                </picture>
                                 <p class="portfolio__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos minima ex odio. Corporis atque aut eos cumque, iure ipsum cupiditate suscipit, commodi recusandae consequatur sequi repellat velit nostrum deserunt aliquam?</p>
                             </div>
                             <div class="portfolio__content">
@@ -102,7 +180,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port4.jpg" alt="Визуализация маркетинга проекта прайм" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port4.jpg 1x, ./images/port4@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port4-tab.jpg 1x, ./images/port4-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port4-mob.jpg 1x, ./images/port4-mob@2x.jpg 2x">
+                                    <img src="./images/port4.jpg" alt="Визуализация маркетинга проекта прайм">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum reiciendis veritatis eius temporibus magni quae blanditiis eum numquam explicabo expedita nesciunt, iste rerum saepe aut error deleniti fugiat velit ipsam.</p>
                             </div>
                             <div class="portfolio__content">
@@ -114,7 +197,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port5.jpg" alt="Визуализация приложения проекта боксэс" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port5.jpg 1x, ./images/port5@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port5-tab.jpg 1x, ./images/port5-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port5-mob.jpg 1x, ./images/port5-mob@2x.jpg 2x">
+                                    <img src="./images/port5.jpg" alt="Визуализация приложения проекта боксэс">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ea dolor non minus numquam magni eius fugiat quasi minima? Quia cumque vero rerum cum sed accusamus asperiores voluptatum ut! Hic!</p>
                             </div>
                             <div class="portfolio__content">
@@ -126,7 +214,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port6.jpg" alt="Визуализация сайта инспирэйшн хэс ноу бордэрс" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port6.jpg 1x, ./images/port6@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port6-tab.jpg 1x, ./images/port6-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port6-mob.jpg 1x, ./images/port6-mob@2x.jpg 2x">
+                                    <img src="./images/port6.jpg" alt="Визуализация сайта инспирэйшн хэс ноу бордэрс">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempora consequuntur placeat facilis explicabo quos voluptatum fuga, corrupti distinctio illo corporis repudiandae animi repellat labore inventore? Voluptatem nisi delectus voluptas.</p>
                             </div>
                             <div class="portfolio__content">
@@ -138,7 +231,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port7.jpg" alt="Визуализация дизайна издания лимитэд эдишн" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port7.jpg 1x, ./images/port7@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port7-tab.jpg 1x, ./images/port7-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port7-mob.jpg 1x, ./images/port7-mob@2x.jpg 2x">
+                                    <img src="./images/port7.jpg" alt="Визуализация дизайна издания лимитэд эдишн">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores amet cumque dicta dignissimos ullam nobis culpa vel vero, consequuntur cum ex fugit accusamus commodi dolorem expedita quos. Odit, rerum nulla.</p>
                             </div>
                             <div class="portfolio__content">
@@ -150,7 +248,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port8.jpg" alt="Визуализация маркетинга проекта лаб" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port8.jpg 1x, ./images/port8@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port8-tab.jpg 1x, ./images/port8-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port8-mob.jpg 1x, ./images/port8-mob@2x.jpg 2x">
+                                    <img src="./images/port8.jpg" alt="Визуализация маркетинга проекта лаб">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, reprehenderit provident quod eius qui dolore porro hic sequi nemo sint maxime cum error? Officiis voluptates sit commodi, nostrum aut quasi!</p>
                             </div>
                             <div class="portfolio__content">
@@ -162,7 +265,12 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__overlay">
-                                <img src="./images/port9.jpg" alt="Визуализация приложения гровинг бизинэс" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/port9.jpg 1x, ./images/port9@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/port9-tab.jpg 1x, ./images/port9-tab@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/port9-mob.jpg 1x, ./images/port9-mob@2x.jpg 2x">
+                                    <img src="./images/port9.jpg" alt="Визуализация приложения гровинг бизинэс">
+                                </picture>
                                 <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse vel consequuntur eius id expedita omnis dolorem tempore impedit? Ratione distinctio velit rem consectetur pariatur sapiente dolorem. Reprehenderit, officiis exercitationem.</p>
                             </div>
                             <div class="portfolio__content">
@@ -175,7 +283,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer block">
         <div class="container footer__container">
             <div class="footer__left-wrap">
                 <a href="./index.html" class="logo footer__logo">Web<span lang="en" class="logo--light">Studio</span></a>
@@ -242,4 +350,5 @@
         </div>
     </footer>
 </body>
+<script src="./js/mobile-menu.js"></script>
 </html>

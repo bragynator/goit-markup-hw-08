@@ -16,8 +16,6 @@
 }
 
 .modal {
-	width: 528px;
-	min-height: 581px;
 	padding: 40px;
 	position: absolute;
 	top: 50%;
@@ -32,6 +30,14 @@
 
 	.backdrop.is-hidden & {
 		transform: translate(-50%, -50%) scale(1.15);
+	}
+
+	@media screen and (min-width: 480px) {
+		min-width: 450px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		min-width: 528px;
 	}
 }
 
@@ -67,11 +73,15 @@
 
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 1.15;
+	line-height: 1.5;
 	text-align: center;
 	letter-spacing: $main-text-ls;
 
 	color: $main-title-color;
+
+	@media screen and (min-width: 1200px) {
+		line-height: 1.15;
+	}
 }
 
 .application__label {
@@ -85,7 +95,7 @@
 
 	color: $main-text-color;
 
-	&_last {
+	&--no-margin-bottom {
 		margin-bottom: 0;
 	}
 }
@@ -138,6 +148,8 @@
 	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	&::placeholder {
+		font-size: 14px;
+		line-height: 1.14;
 		color: rgba(117, 117, 117, 0.5);
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
@@ -158,12 +170,17 @@
 	margin-top: 20px;
 	margin-bottom: 30px;
 
-	font-size: $main-text-fs;
-	line-height: 1.71;
+	font-size: 12px;
+	line-height: 1.17;
 	letter-spacing: $main-text-ls;
 
 	color: $main-text-color;
 	cursor: pointer;
+
+	@media screen and (min-width: 1200px) {
+		font-size: $main-text-fs;
+		line-height: 1.71;
+	}
 }
 
 .policy__checkbox {
@@ -199,8 +216,6 @@
 }
 
 .policy__link {
-	margin-left: 4px;
-
 	color: $accent-color;
 	text-decoration: underline;
 }

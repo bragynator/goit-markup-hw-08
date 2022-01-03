@@ -10,4 +10,8 @@
 	&--light {
 		color: $secondary-title-color;
 	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 26px;
+	}
 }
